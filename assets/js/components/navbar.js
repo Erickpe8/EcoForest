@@ -18,11 +18,11 @@ export function initNavbar() {
     // Sticky Header Logic
     const handleScroll = debounce(() => {
         if (window.scrollY > 10) {
-            header.classList.add('bg-surface/85', 'backdrop-blur-md', 'border-b', 'shadow-sm');
-            header.classList.remove('bg-transparent', 'border-transparent');
+            header.classList.add('bg-surface/95', 'backdrop-blur-md', 'border-b', 'shadow-sm');
+            header.classList.remove('bg-surface/80', 'border-transparent', 'shadow-none');
         } else {
-            header.classList.remove('bg-surface/85', 'backdrop-blur-md', 'border-b', 'shadow-sm');
-            header.classList.add('bg-transparent', 'border-transparent');
+            header.classList.remove('bg-surface/95', 'backdrop-blur-md', 'border-b', 'shadow-sm');
+            header.classList.add('bg-surface/80', 'border-transparent', 'shadow-none');
         }
     }, 10);
 
