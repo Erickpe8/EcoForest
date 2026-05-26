@@ -1,0 +1,110 @@
+/* Accessibility Overrides */
+
+/* High Contrast Mode */
+.high-contrast {
+    --color-primary: #000000;
+    --color-primary-light: #000000;
+    --color-primary-dark: #000000;
+    --color-secondary: #000000;
+    --color-background: #FFFFFF;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #000000;
+    --color-text-secondary: #000000;
+    --color-text-tertiary: #000000;
+}
+
+.high-contrast.dark {
+    --color-primary: #FFFFFF;
+    --color-primary-light: #FFFFFF;
+    --color-primary-dark: #FFFFFF;
+    --color-secondary: #FFFFFF;
+    --color-background: #000000;
+    --color-surface: #000000;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #FFFFFF;
+    --color-text-tertiary: #FFFFFF;
+}
+
+.high-contrast * {
+    border-color: currentColor !important;
+}
+
+/* Dyslexia Font */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/gh/antijingoist/opendyslexic@master/compiled/OpenDyslexic-Regular.otf') format('opentype');
+    font-display: swap;
+}
+
+.dyslexia-font {
+    font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+/* Increased Spacing */
+.increased-spacing {
+    --spacing-multiplier: 1.5;
+    --line-height-base: 2;
+    letter-spacing: 0.1em !important;
+    word-spacing: 0.1em !important;
+}
+
+.increased-spacing p, 
+.increased-spacing h1, 
+.increased-spacing h2, 
+.increased-spacing h3, 
+.increased-spacing li {
+    line-height: var(--line-height-base) !important;
+    margin-bottom: calc(1rem * var(--spacing-multiplier)) !important;
+}
+
+/* Grayscale */
+.grayscale-mode {
+    filter: grayscale(100%) !important;
+}
+
+/* Pause Animations */
+.pause-animations *,
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Highlight Links */
+.highlight-links a {
+    text-decoration: underline !important;
+    text-decoration-color: var(--color-primary) !important;
+    text-decoration-thickness: 3px !important;
+    text-underline-offset: 4px !important;
+    background-color: rgba(255, 255, 0, 0.3) !important;
+    color: var(--color-text-primary) !important;
+}
+
+/* Large Cursor */
+.large-cursor, .large-cursor * {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="%23000" stroke="%23FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87c.45 0 .67-.54.35-.85L6.35 2.85a.5.5 0 0 0-.85.36Z"/></svg>') 0 0, auto !important;
+}
+
+/* Hide Images */
+.hide-images img, .hide-images svg:not([aria-hidden="true"]) {
+    visibility: hidden !important;
+}
+
+/* Reading Guide */
+#reading-guide {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--color-primary);
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px var(--color-primary);
+    display: none;
+}
+#reading-guide.active {
+    display: block;
+}
