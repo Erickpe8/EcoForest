@@ -2,7 +2,24 @@
 
 Plataforma web premium enfocada en la sostenibilidad ambiental y la protección de ecosistemas, diseñada con los más altos estándares de accesibilidad europea y experiencia de usuario.
 
-![EcoForest Preview](https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80)
+## 🎯 Público Objetivo y Población Enfocada
+
+EcoForest ha sido diseñada bajo el principio de **Diseño Universal**, lo que significa que su público objetivo abarca un espectro muy amplio y diverso, garantizando que nadie quede excluido de la iniciativa ecológica:
+
+1. **Usuarios con Discapacidades (Enfoque Prioritario):** 
+   Gracias al cumplimiento estricto de las normativas **WCAG 2.2 AA** y **EAA 2025** (Acta Europea de Accesibilidad), la plataforma está orientada a ser 100% usable por personas con:
+   - *Discapacidades visuales:* Baja visión, daltonismo o fotofobia (mediante alto contraste, escalado de texto y modo oscuro).
+   - *Discapacidades cognitivas:* Dislexia o TDAH (mediante fuentes especializadas, reducción de animaciones y guías de lectura).
+   - *Discapacidades motrices:* Usuarios que no pueden usar un ratón (mediante navegación completa por teclado y cursores adaptados).
+
+2. **Ciudadanía General y Activistas Ambientales:** 
+   Personas de cualquier edad interesadas en el medio ambiente, el cambio climático y la ecología que buscan informarse, donar o participar como voluntarios en proyectos de reforestación.
+
+3. **Instituciones y Sector Corporativo:** 
+   Empresas, ONGs y organizaciones gubernamentales que buscan alianzas estratégicas para compensar su huella de carbono y cumplir con sus objetivos de Responsabilidad Social Corporativa (RSC).
+
+4. **Comunidad Educativa:** 
+   Estudiantes, profesores e investigadores que requieran información clara, estructurada y accesible sobre el impacto ambiental y los beneficios vitales de los árboles.
 
 ## 🌟 Características Principales
 
