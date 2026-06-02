@@ -6,15 +6,26 @@ Plataforma web premium enfocada en la sostenibilidad ambiental y la protección 
 
 ## 🌟 Características Principales
 
-### Accesibilidad Enterprise (WCAG 2.2 AA & EAA 2025)
-- **Widget Flotante Avanzado:** Perfiles rápidos para baja visión y cognitivos.
-- **Ajustes Visuales:** Modo oscuro, alto contraste, escala de grises.
-- **Tipografía Inclusiva:** Soporte para fuente de dislexia (OpenDyslexic) y espaciado aumentado.
-- **Navegación Asistida:** Guía de lectura (Alt+R), cursor grande, resaltado de enlaces.
-- **Navegación por Teclado:** Focus trapping en modales, skip links, y outline visible.
-- **Respeto al Usuario:** Soporte nativo para `prefers-reduced-motion` y `prefers-color-scheme`.
+### ♿ Funciones de Accesibilidad y Usabilidad (WCAG 2.2 AA & EAA 2025)
 
-### Diseño Premium y UX
+El proyecto incluye un **Widget de Accesibilidad Avanzado** (accesible mediante el botón flotante o el atajo `Alt + A`) y mejoras estructurales profundas. A continuación se detalla cada función, su propósito y la normativa que la respalda:
+
+| Función | Descripción de Usabilidad | Regla / Criterio que la respalda |
+| :--- | :--- | :--- |
+| **Modo Oscuro** | Cambia la paleta a colores oscuros para reducir la fatiga visual, el deslumbramiento y ayudar a usuarios con fotofobia. | *WCAG 1.4.8 Visual Presentation (AAA)* / Accesibilidad Cognitiva |
+| **Alto Contraste** | Aumenta drásticamente la diferencia de color entre el texto y el fondo (blanco puro sobre negro absoluto) para usuarios con baja visión. | *WCAG 1.4.6 Contrast (Enhanced) (AAA)* |
+| **Escala de Grises** | Elimina los colores de la interfaz. Útil para usuarios con daltonismo severo o para reducir la sobrecarga sensorial. | *WCAG 1.4.1 Use of Color (A)* |
+| **Tamaño de Texto** | Permite escalar la tipografía hasta un 200% sin pérdida de contenido ni funcionalidad, facilitando la lectura. | *WCAG 1.4.4 Resize Text (AA)* |
+| **Fuente Dislexia** | Cambia la tipografía a *OpenDyslexic*, diseñada específicamente para prevenir la rotación y confusión de letras. | *WCAG 3.1.5 Reading Level (AAA)* / Accesibilidad Cognitiva |
+| **Aumentar Espaciado** | Incrementa el interlineado y el espacio entre letras/palabras para evitar el amontonamiento visual y facilitar la lectura. | *WCAG 1.4.12 Text Spacing (AA)* |
+| **Pausar Animaciones** | Detiene todo movimiento, transiciones y auto-scroll para evitar mareos, distracciones o convulsiones. | *WCAG 2.2.2 Pause, Stop, Hide (A)* / *2.3.3 Animation from Interactions (AAA)* |
+| **Resaltar Enlaces** | Subraya y destaca visualmente con un fondo amarillo todos los elementos clickeables para no depender solo del color. | *WCAG 1.4.1 Use of Color (A)* / *WCAG 2.4.7 Focus Visible (AA)* |
+| **Cursor Grande** | Aumenta significativamente el tamaño del puntero para facilitar el seguimiento visual y el control motriz del ratón. | Accesibilidad Motriz y Visual (*WCAG 1.4.8*) |
+| **Guía de Lectura** | Muestra una línea horizontal que sigue al ratón (`Alt + R`) para ayudar a mantener el foco en bloques de texto largos (TDAH). | Accesibilidad Cognitiva |
+| **Perfiles Inteligentes** | Agrupa configuraciones predefinidas (Baja Visión, Cognitivo) para una activación rápida de múltiples ayudas simultáneas. | *EAA 2025* (Requisitos de Personalización) |
+| **Skip Links & Focus Trap** | Enlace oculto para saltar al contenido principal y retención de foco en modales/menús para usuarios que navegan por teclado. | *WCAG 2.4.1 Bypass Blocks (A)* / *WCAG 2.1.2 No Keyboard Trap (A)* |
+
+### 💎 Diseño Premium y UX
 - **Glassmorphism:** Efectos translúcidos sutiles y elegantes.
 - **Responsive Design:** Experiencia fluida desde dispositivos móviles hasta pantallas ultra anchas.
 - **Performance:** Animaciones optimizadas con `requestAnimationFrame` e `IntersectionObserver`.
