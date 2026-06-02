@@ -1,6 +1,29 @@
 # EcoForest 🌲
 
-Plataforma web premium enfocada en la sostenibilidad ambiental y la protección de ecosistemas, diseñada con los más altos estándares de accesibilidad europea y experiencia de usuario.
+Plataforma web premium enfocada en la sostenibilidad ambiental y la protección de ecosistemas, diseñada como un proyecto de **Landing Page enfocada en usuarios avanzados, aplicando estándares internacionales de accesibilidad (WCAG 2.2 AA) y normativas europeas (EAA 2025)**.
+
+## 📊 Análisis del Diseño, Accesibilidad y Usabilidad
+
+Este proyecto no es solo una página informativa, sino una implementación técnica rigurosa de usabilidad y accesibilidad. A continuación se presenta el análisis de las decisiones tomadas:
+
+### 1. Análisis del Diseño (Enfoque Premium e Institucional)
+El diseño visual se construyó bajo una estética *Premium/Enterprise* (inspirada en referentes como Apple, Stripe o Vercel), buscando transmitir confianza, modernidad y seriedad institucional.
+- **Glassmorphism y Profundidad:** Se aplicaron efectos translúcidos (`backdrop-filter`) y sombras escalonadas (`box-shadow`) para crear una jerarquía visual clara sin saturar la vista.
+- **Paleta de Colores:** Se utilizó un esquema de colores basado en tonos esmeralda y pizarra (Slate), garantizando que la estética ecológica no comprometa el contraste.
+- **Minimalismo Funcional:** Se eliminaron elementos distractores (como glows excesivos o animaciones agresivas) para mantener la atención del usuario en el mensaje principal y los Call to Action (CTA).
+
+### 2. Análisis de Accesibilidad (Estándares Internacionales y Europeos)
+La aplicación cumple estrictamente con las Pautas de Accesibilidad para el Contenido Web (**WCAG 2.2 Nivel AA**) y se anticipa al Acta Europea de Accesibilidad (**EAA 2025**).
+- **Semántica HTML5:** Uso riguroso de landmarks (`<header>`, `<main>`, `<section>`, `<nav>`) para que los lectores de pantalla (NVDA, JAWS, VoiceOver) puedan estructurar el contenido correctamente.
+- **Navegación por Teclado:** Implementación de *Focus Trapping* en modales (como el menú móvil y el widget de accesibilidad), asegurando que los usuarios que no usan ratón no pierdan el foco. Todos los elementos interactivos tienen un `outline` visible de alto contraste.
+- **Atributos ARIA Dinámicos:** Uso de `aria-expanded`, `aria-live` (para anunciar errores de formulario o cambios en contadores) y `aria-pressed` para comunicar el estado de la interfaz en tiempo real.
+- **Contraste:** Todos los textos superan el ratio mínimo de contraste de 4.5:1 (AA), y en muchos casos alcanzan el 7:1 (AAA).
+
+### 3. Análisis de Usabilidad (Widget Avanzado)
+Para atender a usuarios con necesidades específicas (baja visión, dislexia, TDAH, etc.), se desarrolló un **Widget de Accesibilidad** modular y persistente (guarda preferencias en `localStorage`):
+- **Personalización Total:** Permite al usuario tomar el control de la interfaz (escalar texto, cambiar a modo oscuro, escala de grises, alto contraste).
+- **Perfiles Inteligentes:** Agrupa configuraciones complejas en un solo clic (Ej. Perfil "Cognitivo" activa fuente para dislexia, pausa animaciones y muestra guía de lectura).
+- **Respeto a las Preferencias del SO:** La aplicación detecta automáticamente si el usuario tiene configurado `prefers-reduced-motion` en su sistema operativo y desactiva las animaciones por defecto.
 
 ## 🎯 Público Objetivo y Población Enfocada
 
