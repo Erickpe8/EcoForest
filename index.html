@@ -568,17 +568,19 @@
                 <fieldset>
                     <legend class="text-xs font-bold text-textTertiary uppercase tracking-widest mb-4">Perfiles Inteligentes</legend>
                     <div class="grid grid-cols-2 gap-4">
-                        <button class="a11y-profile-btn group flex flex-col items-center p-4 bg-background border border-gray-200 dark:border-gray-700 rounded-xl hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary text-textPrimary transition-all" data-profile="vision">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <button class="a11y-profile-btn group flex flex-col items-center p-4 bg-background border border-gray-200 dark:border-gray-700 rounded-xl hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary text-textPrimary transition-all" data-profile="vision" aria-label="Activar perfil de Baja Visión: Aumenta el tamaño del texto, activa alto contraste y cursor grande">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors text-primary" aria-hidden="true">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
                             </div>
                             <span class="text-sm font-semibold text-center">Baja Visión</span>
+                            <span class="text-[10px] text-textSecondary mt-1 text-center font-normal">Texto grande, alto contraste y cursor visible</span>
                         </button>
-                        <button class="a11y-profile-btn group flex flex-col items-center p-4 bg-background border border-gray-200 dark:border-gray-700 rounded-xl hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary text-textPrimary transition-all" data-profile="cognitive">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <button class="a11y-profile-btn group flex flex-col items-center p-4 bg-background border border-gray-200 dark:border-gray-700 rounded-xl hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary text-textPrimary transition-all" data-profile="cognitive" aria-label="Activar perfil Cognitivo: Activa fuente para dislexia, pausa animaciones y muestra guía de lectura">
+                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-3 group-hover:bg-primary group-hover:text-white transition-colors text-primary" aria-hidden="true">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                             </div>
                             <span class="text-sm font-semibold text-center">Cognitivo</span>
+                            <span class="text-[10px] text-textSecondary mt-1 text-center font-normal">Fuente dislexia, sin animaciones y guía de lectura</span>
                         </button>
                     </div>
                 </fieldset>
@@ -589,19 +591,28 @@
                     <div class="text-xs font-bold text-textTertiary uppercase tracking-widest mb-4">Ajustes Visuales</div>
                     <div class="space-y-5">
                         <div class="flex items-center justify-between">
-                            <label for="toggle-dark-mode" class="text-textPrimary font-semibold">Modo Oscuro</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-dark-mode" class="text-textPrimary font-semibold">Modo Oscuro</label>
+                                <span class="text-xs text-textSecondary">Cambia a colores oscuros para descansar la vista</span>
+                            </div>
                             <button id="toggle-dark-mode" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 dark:bg-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1 dark:translate-x-6"></span>
                             </button>
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-high-contrast" class="text-textPrimary font-semibold">Alto Contraste</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-high-contrast" class="text-textPrimary font-semibold">Alto Contraste</label>
+                                <span class="text-xs text-textSecondary">Aumenta la diferencia entre texto y fondo</span>
+                            </div>
                             <button id="toggle-high-contrast" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-grayscale" class="text-textPrimary font-semibold">Escala de Grises</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-grayscale" class="text-textPrimary font-semibold">Escala de Grises</label>
+                                <span class="text-xs text-textSecondary">Elimina los colores de la página</span>
+                            </div>
                             <button id="toggle-grayscale" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
@@ -622,13 +633,19 @@
                             <input type="range" id="font-size-range" min="100" max="200" step="10" value="100" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary">
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-dyslexia" class="text-textPrimary font-semibold">Fuente Dislexia</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-dyslexia" class="text-textPrimary font-semibold">Fuente Dislexia</label>
+                                <span class="text-xs text-textSecondary">Cambia la fuente para facilitar la lectura</span>
+                            </div>
                             <button id="toggle-dyslexia" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-spacing" class="text-textPrimary font-semibold">Aumentar Espaciado</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-spacing" class="text-textPrimary font-semibold">Aumentar Espaciado</label>
+                                <span class="text-xs text-textSecondary">Separa más las letras y las líneas de texto</span>
+                            </div>
                             <button id="toggle-spacing" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
@@ -642,19 +659,28 @@
                     <div class="text-xs font-bold text-textTertiary uppercase tracking-widest mb-4">Navegación</div>
                     <div class="space-y-5">
                         <div class="flex items-center justify-between">
-                            <label for="toggle-animations" class="text-textPrimary font-semibold">Pausar Animaciones</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-animations" class="text-textPrimary font-semibold">Pausar Animaciones</label>
+                                <span class="text-xs text-textSecondary">Detiene el movimiento en la página</span>
+                            </div>
                             <button id="toggle-animations" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-highlight-links" class="text-textPrimary font-semibold">Resaltar Enlaces</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-highlight-links" class="text-textPrimary font-semibold">Resaltar Enlaces</label>
+                                <span class="text-xs text-textSecondary">Subraya y destaca los enlaces clickeables</span>
+                            </div>
                             <button id="toggle-highlight-links" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
                         </div>
                         <div class="flex items-center justify-between">
-                            <label for="toggle-large-cursor" class="text-textPrimary font-semibold">Cursor Grande</label>
+                            <div class="flex flex-col">
+                                <label for="toggle-large-cursor" class="text-textPrimary font-semibold">Cursor Grande</label>
+                                <span class="text-xs text-textSecondary">Aumenta el tamaño del puntero del ratón</span>
+                            </div>
                             <button id="toggle-large-cursor" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
                             </button>
@@ -662,7 +688,7 @@
                         <div class="flex items-center justify-between">
                             <div class="flex flex-col">
                                 <label for="toggle-reading-guide" class="text-textPrimary font-semibold">Guía de Lectura</label>
-                                <span class="text-xs text-textTertiary">Atajo: Alt + R</span>
+                                <span class="text-xs text-textSecondary">Línea horizontal que sigue al ratón (Atajo: Alt + R)</span>
                             </div>
                             <button id="toggle-reading-guide" role="switch" aria-checked="false" class="relative inline-flex h-7 w-12 items-center rounded-full bg-gray-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
                                 <span class="inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
