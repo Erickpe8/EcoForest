@@ -76,6 +76,10 @@
 .btn-primary:active {
     transform: translateY(0);
 }
+.btn-primary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
 
 .btn-outline {
     display: inline-flex;
@@ -95,6 +99,10 @@
 }
 .dark .btn-outline:hover {
     background-color: rgba(16, 185, 129, 0.1);
+}
+.btn-outline:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* Nav Links */
