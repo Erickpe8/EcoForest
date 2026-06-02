@@ -221,6 +221,14 @@ function setupEventListeners() {
     if (btnReset) {
         btnReset.addEventListener('click', () => {
             state = { ...defaultState };
+            activeProfile = null;
+            
+            // Remove visual active state from profile buttons
+            document.querySelectorAll('.a11y-profile-btn').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-primary', 'border-primary');
+                btn.setAttribute('aria-pressed', 'false');
+            });
+            
             applyState();
             saveState();
         });
@@ -236,22 +244,49 @@ function setupEventListeners() {
     });
 }
 
+let activeProfile = null;
+
 function applyProfile(profile) {
-    state = { ...defaultState };
-    
-    switch (profile) {
-        case 'vision':
-            state.fontSize = 130;
-            state.highContrast = true;
-            state.largeCursor = true;
-            state.highlightLinks = true;
-            break;
-        case 'cognitive':
-            state.dyslexiaFont = true;
-            state.increasedSpacing = true;
-            state.pauseAnimations = true;
-            state.readingGuide = true;
-            break;
+    // If clicking the currently active profile, turn it off (reset to default)
+    if (activeProfile === profile) {
+        state = { ...defaultState };
+        activeProfile = null;
+        
+        // Remove visual active state from buttons
+        document.querySelectorAll('.a11y-profile-btn').forEach(btn => {
+            btn.classList.remove('ring-2', 'ring-primary', 'border-primary');
+            btn.setAttribute('aria-pressed', 'false');
+        });
+    } else {
+        // Turn on the new profile
+        state = { ...defaultState };
+        activeProfile = profile;
+        
+        switch (profile) {
+            case 'vision':
+                state.fontSize = 130;
+                state.highContrast = true;
+                state.largeCursor = true;
+                state.highlightLinks = true;
+                break;
+            case 'cognitive':
+                state.dyslexiaFont = true;
+                state.increasedSpacing = true;
+                state.pauseAnimations = true;
+                state.readingGuide = true;
+                break;
+        }
+        
+        // Update visual active state for buttons
+        document.querySelectorAll('.a11y-profile-btn').forEach(btn => {
+            if (btn.getAttribute('data-profile') === profile) {
+                btn.classList.add('ring-2', 'ring-primary', 'border-primary');
+                btn.setAttribute('aria-pressed', 'true');
+            } else {
+                btn.classList.remove('ring-2', 'ring-primary', 'border-primary');
+                btn.setAttribute('aria-pressed', 'false');
+            }
+        });
     }
     
     applyState();
